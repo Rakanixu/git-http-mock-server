@@ -133,7 +133,7 @@ new Promise((resolve, reject) => {
         console.log('client disconnected')
       })
     }
-  ).listen(process.env.GIT_SSH_MOCK_SERVER_PORT || 2222, '127.0.0.1', function () {
+  ).listen(process.env.GIT_SSH_MOCK_SERVER_PORT || 2222, process.env.GIT_SSH_MOCK_SERVER_ADRESS || '127.0.0.1', function () {
     console.log('Listening on port ' + this.address().port)
   })
 })
